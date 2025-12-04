@@ -490,6 +490,15 @@ wheels = [
 ]
 
 [[package]]
+name = "jsonpickle"
+version = "4.1.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/e4/a6/d07afcfdef402900229bcca795f80506b207af13a838d4d99ad45abf530c/jsonpickle-4.1.1.tar.gz", hash = "sha256:f86e18f13e2b96c1c1eede0b7b90095bbb61d99fedc14813c44dc2f361dbbae1", size = 316885, upload-time = "2025-06-02T20:36:11.57Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/c1/73/04df8a6fa66d43a9fd45c30f283cc4afff17da671886e451d52af60bdc7e/jsonpickle-4.1.1-py3-none-any.whl", hash = "sha256:bb141da6057898aa2438ff268362b126826c812a1721e31cf08a6e142910dc91", size = 47125, upload-time = "2025-06-02T20:36:08.647Z" },
+]
+
+[[package]]
 name = "jupyter-client"
 version = "8.6.3"
 source = { registry = "https://pypi.org/simple" }
@@ -702,6 +711,7 @@ dependencies = [
     { name = "ipykernel" },
     { name = "ipywidgets" },
     { name = "matplotlib" },
+    { name = "networks" },
     { name = "networkx" },
     { name = "numpy" },
     { name = "pandas" },
@@ -717,6 +727,7 @@ requires-dist = [
     { name = "ipykernel", specifier = ">=7.1.0" },
     { name = "ipywidgets", specifier = ">=8.1.8" },
     { name = "matplotlib", specifier = ">=3.10.7" },
+    { name = "networks", specifier = ">=0.3.7" },
     { name = "networkx", specifier = ">=3.6" },
     { name = "numpy", specifier = ">=2.3.4" },
     { name = "pandas", specifier = ">=2.3.3" },
@@ -734,6 +745,18 @@ sdist = { url = "https://files.pythonhosted.org/packages/83/f8/51569ac65d696c8ec
 wheels = [
     { url = "https://files.pythonhosted.org/packages/a0/c4/c2971a3ba4c6103a3d10c4b0f24f461ddc027f0f09763220cf35ca1401b3/nest_asyncio-1.6.0-py3-none-any.whl", hash = "sha256:87af6efd6b5e897c81050477ef65c62e2b2f35d51703cae01aff2905b1852e1c", size = 5195, upload-time = "2024-01-21T14:25:17.223Z" },
 ]
+
+[[package]]
+name = "networks"
+version = "0.3.7"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "jsonpickle" },
+    { name = "matplotlib" },
+    { name = "numpy" },
+    { name = "scipy" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/50/27/83dd161c34fd7535030aa3425aed8691e717f346b6752750b04efc3ef2e4/networks-0.3.7.tar.gz", hash = "sha256:66f87484b762498f6c5c7813ffff88d3d7eac159e0a70a844b2363111cfdcb60", size = 8208, upload-time = "2017-10-23T11:27:31.39Z" }
 
 [[package]]
 name = "networkx"
