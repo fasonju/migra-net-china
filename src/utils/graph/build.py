@@ -108,7 +108,8 @@ def build_granular_graph(df: pd.DataFrame) -> nx.Graph:
             to_node_attrs=G.nodes[first_flow_code]['attributes']
         )
 
-        G.add_edge(hometown_code, first_flow_code, attributes=edge_attributes_1)
+        if hometown_code != first_flow_code:
+            G.add_edge(hometown_code, first_flow_code, attributes=edge_attributes_1)
 
         edge_attributes_2 = EdgeAttributes(
             from_node=first_flow_code,
@@ -128,7 +129,9 @@ def build_granular_graph(df: pd.DataFrame) -> nx.Graph:
             to_node_attrs=G.nodes[current_code]['attributes']
         )
 
-        G.add_edge(first_flow_code, current_code, attributes=edge_attributes_2)
+
+        if first_flow_code != current_code:
+            G.add_edge(first_flow_code, current_code, attributes=edge_attributes_2)
     return G
 
 
