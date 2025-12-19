@@ -1,0 +1,4 @@
+year,num_nodes,teu_min,teu_max,teu_mean,teu_std,num_communities,num_core_nodes
+2010,377,1,4889,67.4,259.75,8,38
+2015,378,1,6086,85.46,325.55,9,38
+2016,378,1,7707,105.38,412.8,8,38
