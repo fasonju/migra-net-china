@@ -1,0 +1,86 @@
+{
+    "PC1": [
+        "households_total",
+        "pop_total_10k",
+        "pop_hukou_10k",
+        "households_rural",
+        "emp_secondary_industry",
+        "emp_rural_total",
+        "pop_rural_10k",
+        "hospital_beds",
+        "emp_tertiary_industry",
+        "secondary_students"
+    ],
+    "PC2": [
+        "emp_primary_industry",
+        "gdp_tertiary_added",
+        "gdp_regional_10k",
+        "income_urban_disp",
+        "crop_sown_area_1k_ha",
+        "fiscal_revenue_local",
+        "gdp_secondary_added",
+        "income_rural_disp",
+        "retail_sales_consumer",
+        "grain_output_tons"
+    ],
+    "PC3": [
+        "cultivated_land_ha",
+        "mech_harvest_area_ha",
+        "ag_machinery_power_10k_kw",
+        "primary_schools",
+        "ag_machinery_power_total",
+        "grain_output_tons",
+        "gross_output_ag_forestry_10k",
+        "secondary_schools",
+        "primary_teachers",
+        "crop_sown_area_1k_ha"
+    ],
+    "PC4": [
+        "elec_consumption_residential",
+        "elec_consumption_total",
+        "secondary_teachers",
+        "licensed_doctors",
+        "primary_schools",
+        "secondary_schools",
+        "emission_smoke_dust",
+        "primary_teachers",
+        "pop_total_10k",
+        "art_venues"
+    ],
+    "PC5": [
+        "wage_urban_avg",
+        "licensed_doctors",
+        "tax_revenue_total",
+        "medical_personnel",
+        "hospital_beds",
+        "cultivated_land_ha",
+        "gdp_secondary_added",
+        "income_rural_disp",
+        "ind_enterprises_above_size",
+        "fiscal_revenue_local"
+    ],
+    "PC6": [
+        "phone_fixed_subs",
+        "emp_secondary_industry",
+        "art_venues",
+        "ind_enterprises_above_size",
+        "primary_teachers",
+        "fiscal_expenditure_local",
+        "primary_schools",
+        "library_collections_1k",
+        "elec_consumption_total",
+        "emp_tertiary_industry"
+    ],
+    "PC7": [
+        "medical_personnel",
+        "licensed_doctors",
+        "library_collections_1k",
+        "emission_smoke_dust",
+        "gdp_per_capita",
+        "broadband_subs",
+        "fixed_asset_inv_urban",
+        "welfare_units",
+        "cultivated_land_ha",
+        "emp_urban_on_duty"
+    ]
+}
