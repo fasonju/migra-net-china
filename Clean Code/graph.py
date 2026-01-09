@@ -7,7 +7,7 @@ df_location = "df_migration_steps.csv"
 df_geo_prefectures_location = "df_geo_prefectures.csv"
 df_geo_provinces_location = "df_geo_provinces.csv"
 
-def create_directed_graph(granularity: Literal["county", "prefecture", "province"]) -> nx.DiGraph:
+def create_directed_graph(granularity: Literal["county", "prefecture", "province"], years: list[int] = None) -> nx.DiGraph:
     """Simple Graph,
 
     Args:
@@ -26,6 +26,8 @@ def create_directed_graph(granularity: Literal["county", "prefecture", "province
     G = nx.DiGraph()
     # dual index using from and to
     for _, row in df.iterrows():
+        if row['year'] not in years and years is not None:
+            continue
 
         if granularity == "prefecture":
             from_code = str(row["from_code"])[:4]
@@ -48,7 +50,6 @@ def create_directed_graph(granularity: Literal["county", "prefecture", "province
             to_lat = row["to_lat"]
         
         
-        
         if G.has_node(from_code) is False:
             G.add_node(from_code, lon=from_lon, lat=from_lat)
         if G.has_node(to_code) is False:
@@ -61,7 +62,7 @@ def create_directed_graph(granularity: Literal["county", "prefecture", "province
         
     return G
     
-def create_undirected_graph(granularity: Literal["county", "prefecture", "province"]) -> nx.Graph:
+def create_undirected_graph(granularity: Literal["county", "prefecture", "province"], years: list[int] = None) -> nx.Graph:
     """Simple Graph,
 
     Args:
@@ -70,6 +71,7 @@ def create_undirected_graph(granularity: Literal["county", "prefecture", "provin
     Returns:
         nx.DiGraph: directed graph object weighted by nummber of flows
     """
+
     if granularity not in ["county", "prefecture", "province"]:
         raise ValueError("granularity must be one of county, prefecture, province")
 
@@ -80,6 +82,8 @@ def create_undirected_graph(granularity: Literal["county", "prefecture", "provin
     G = nx.Graph()
     # dual index using from and to
     for _, row in df.iterrows():
+        if row['year'] not in years and years is not None:
+            continue
         if granularity == "prefecture":
             from_code = str(row["from_code"])[:4]
             to_code = str(row["to_code"])[:4]
@@ -116,5 +120,4 @@ def create_undirected_graph(granularity: Literal["county", "prefecture", "provin
             G[from_code][to_code]["weight"] += 1
         else:
             G.add_edge(from_code, to_code, weight=1)
-            G.add_edge(to_code, from_code, weight=1)
     return G
